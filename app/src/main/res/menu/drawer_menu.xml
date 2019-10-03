@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/PersonnelId"
+            android:icon="@drawable/ic_personnel"
+            android:title="Personnel" />
+        <item
+            android:id="@+id/EmployeeServicesId"
+            android:icon="@drawable/ic_employee_services"
+            android:title="Employee Services" />
+        <item
+            android:id="@+id/LoginId"
+            android:icon="@drawable/ic_login"
+            android:title="Signin" />
+        <item
+            android:id="@+id/messagesId"
+            android:icon="@drawable/ic_message"
+            android:title="Messages" />
+        <item
+            android:id="@+id/StoreId"
+            android:icon="@drawable/ic_store"
+            android:title="Store" />
+        <item
+            android:id="@+id/TrainingId"
+            android:icon="@drawable/ic_training"
+            android:title="Training" />
+        <item
+            android:id="@+id/LogoutId"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>
