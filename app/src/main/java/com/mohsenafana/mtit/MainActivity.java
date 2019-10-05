@@ -1,5 +1,6 @@
 package com.mohsenafana.mtit;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,6 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -37,9 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         initView();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+//        NavigationUI.setupWithNavController(navigationView, navController); // This Line Override the onNavigationItemSelected*(
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
-
         getSupportFragmentManager().beginTransaction().
                 replace(R.id.main_fragment, new TrainingFragment()).commit();
         navigationView.setCheckedItem(R.id.messagesId);
@@ -53,11 +54,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 replace(R.id.main_fragment, new TrainingFragment()).commit();
         navigationView.setCheckedItem(R.id.messagesId);
         navController = Navigation.findNavController(this, R.id.main_fragment);
-        appBarConfiguration = new AppBarConfiguration.Builder(R.id.home, R.id.profile,R.id.LoginId, R.id.fingerprint,R.id.PersonnelId,R.id.LogoutId,
-                R.id.EmployeeServicesId,R.id.StoreId,R.id.messagesId,R.id.TrainingId)
+        appBarConfiguration = new AppBarConfiguration.Builder(R.id.home, R.id.profile, R.id.LoginId, R.id.fingerprint, R.id.PersonnelId, R.id.LogoutId,
+                R.id.EmployeeServicesId, R.id.StoreId, R.id.messagesId, R.id.TrainingId)
                 .setDrawerLayout(drawer)
                 .build();
-
+        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
@@ -77,9 +78,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Log.d("ttt", "onNavigationItemSelected");
+        switch (menuItem.getItemId()) {
             case R.id.PersonnelId:
                 getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new PersonnelFragment()).commit();
@@ -105,10 +106,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         replace(R.id.main_fragment, new TrainingFragment()).commit();
                 break;
             case R.id.LogoutId:
-                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
                 break;
         }
-        drawer.closeDrawer(GravityCompat.START);
+
         return true;
+
     }
 }
