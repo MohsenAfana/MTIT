@@ -4,4 +4,23 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="signin">SignIn</string>
+    <string name="attendance_registration"> Registration</string>
+    <string name="attendance_departure"> Departure</string>
+    <string name="time_now">08:00:00</string>
+    <string name="attendance_and_departure">Attendance and Departure</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="unread_messages">Unread Messages</string>
+    <string name="recent_messages">Recent Messages</string>
+    <string name="salary">Salary</string>
+    <string name="zakatimg">ZakatImg</string>
+    <string name="salaryimg">SalaryImg</string>
+    <string name="portfolioimg">PortfolioImg</string>
+    <string name="transactionimg">TransactionImg</string>
+    <string name="clockimg">ClockImg</string>
+    <string name="attendanceimg">AttendanceImg</string>
+    <string name="departureimg">departureImg</string>
+    <string name="zakat">Zakat</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="transaction">Transaction</string>
 </resources>

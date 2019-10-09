@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@color/background"
+    android:padding="8dp">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/TvUnreadMessage"
+        style="@style/TextViewStyle"
+        android:text="@string/unread_messages">
+
+    </TextView>
+
+    <include
+        android:id="@+id/unread1"
+        layout="@layout/cell_unread_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TvUnreadMessage"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <include
+        android:id="@+id/unread12"
+        layout="@layout/cell_unread_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unread1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/RecentMessages"
+        style="@style/TextViewStyle"
+        android:layout_below="@id/unread12"
+        android:layout_marginTop="32dp"
+        android:text="@string/recent_messages">
+
+    </TextView>
+
+    <include
+        android:id="@+id/recent1"
+        layout="@layout/cell_seen_messages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RecentMessages"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <include
+        android:id="@+id/recent2"
+        layout="@layout/cell_seen_messages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recent1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+
+</RelativeLayout>

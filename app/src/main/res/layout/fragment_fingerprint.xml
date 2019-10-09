@@ -1,17 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:background="#34a853"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="8dp"
     tools:context=".Fragments.FingerprintFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textColor="#ffffff"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <CalendarView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/background">
 
-</FrameLayout>
+    </CalendarView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/TimeNowTv"
+            style="@style/TextViewStyle"
+            android:layout_centerVertical="true"
+            android:text="@string/time_now">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/ClockIv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/TimeNowTv"
+            android:contentDescription="@string/clockimg"
+
+            android:src="@drawable/ic_clock">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AttendanceRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeTime"
+        android:layout_marginTop="32dp">
+
+        <RelativeLayout
+            android:id="@+id/AttendaceRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp">
+
+            <TextView
+                android:id="@+id/AttendaceTv"
+                style="@style/TextViewStyle2"
+                android:text="@string/attendance_registration">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/AttendanceRegistrationIv"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_below="@id/AttendaceTv"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/attendanceimg"
+                android:src="@drawable/ic_black_fingerprint" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/leftRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp">
+
+            <TextView
+                android:id="@+id/LeftTv"
+                style="@style/TextViewStyle2"
+                android:text="@string/attendance_departure">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/AttendanceDepartureIv"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_below="@id/LeftTv"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/departureimg"
+                android:src="@drawable/ic_black_fingerprint" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
