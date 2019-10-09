@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportFragmentManager().beginTransaction().
                 replace(R.id.main_fragment, new TrainingFragment()).commit();
         navController = Navigation.findNavController(this, R.id.main_fragment);
-        appBarConfiguration = new AppBarConfiguration.Builder(R.id.home, R.id.profile, R.id.LoginId, R.id.fingerprint, R.id.PersonnelId, R.id.LogoutId,
+        appBarConfiguration = new AppBarConfiguration.Builder(R.id.home, R.id.profile, R.id.LoginId,
+                R.id.fingerprint, R.id.PersonnelId, R.id.LogoutId,
                 R.id.EmployeeServicesId, R.id.StoreId, R.id.messagesId, R.id.TrainingId)
                 .setDrawerLayout(drawer)
                 .build();
