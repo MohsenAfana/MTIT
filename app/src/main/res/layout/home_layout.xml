@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/receivables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/receivablesIv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/receivables_ic"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+
+            />
+
+        <TextView
+            android:id="@+id/receivables_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="SenderName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/receivablesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="468468468"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/vacation_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/vacation_balanceIv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/vacation_icon"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+
+            />
+
+        <TextView
+            android:id="@+id/senderNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="SenderName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/MessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/unreadmessagelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/unreadmessageIv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/message_ic"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+
+            />
+
+        <TextView
+            android:id="@+id/unreadmessageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="SenderName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/signin_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/signin_timeIv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/fingerprint_ic"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+
+            />
+
+        <TextView
+            android:id="@+id/signin_timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="SenderName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/signin_time_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/your_balance_now_in_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/balance_nowIv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/balance_icon"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+
+            />
+
+        <TextView
+            android:id="@+id/balance_nowTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="SenderName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/balance_now_numberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"></TextView>
+
+
+    </LinearLayout>
+</LinearLayout>
