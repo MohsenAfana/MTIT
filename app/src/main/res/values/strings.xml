@@ -23,4 +23,15 @@
     <string name="zakat">Zakat</string>
     <string name="portfolio">Portfolio</string>
     <string name="transaction">Transaction</string>
+    <string name="employee_vacations">Employee Vacations</string>
+    <string name="request_vacation">Request Vacation</string>
+    <string name="employee_vacation_balances">Employee Vacation Balances</string>
+    <string name="accrued_vacation">Accrued Vacation</string>
+    <string name="executed_vacation">Executed Vacation</string>
+    <string name="special_permission_deduction">Special Permission </string>
+    <string name="balance_carried_forward">Balance Forward</string>
+    <string name="remaining_balance">Remaining Balance</string>
+    <string name="normal_vacation">Normal Vacation</string>
+    <string name="vacation_type">Vacation Type</string>
+    <string name="casual_vacation">Casual vacation</string>
 </resources>
