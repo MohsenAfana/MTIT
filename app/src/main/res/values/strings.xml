@@ -34,4 +34,8 @@
     <string name="normal_vacation">Normal Vacation</string>
     <string name="vacation_type">Vacation Type</string>
     <string name="casual_vacation">Casual vacation</string>
+    <string name="select_year">Select Year</string>
+    <string name="salary_description">Salary Description</string>
+    <string name="clearance_description">Clearance Description</string>
+    <string name="mohsen_afana">Mohsen Afana</string>
 </resources>
