@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.mohsenafana.mtit"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -28,12 +28,11 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'me.aflak.libraries:fingerprint:2.5.3'
 
 
     def nav_version = "2.1.0-beta02"
-    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-fragment:$nav_version"
-    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-ui:$nav_version"
 
 }

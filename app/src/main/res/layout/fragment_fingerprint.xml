@@ -32,13 +32,13 @@
 
         <ImageView
             android:id="@+id/ClockIv"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="45dp"
+            android:layout_height="54dp"
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/TimeNowTv"
             android:contentDescription="@string/clockimg"
 
-            android:src="@drawable/ic_clock">
+            android:src="@drawable/ic_clock_black">
 
         </ImageView>
 
