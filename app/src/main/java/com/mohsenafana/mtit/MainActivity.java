@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,6 +26,7 @@ import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.mohsenafana.mtit.Fragments.EmployeeServices.EmployeeVacationFragment;
 import com.mohsenafana.mtit.Fragments.EmployeeServicesFragment;
 import com.mohsenafana.mtit.Fragments.MessagesFragment;
 import com.mohsenafana.mtit.Fragments.PersonnelFragment;
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Log.d("ttt", "onNavigationItemSelected");
@@ -145,5 +148,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         }
+    }
+
+    public void setFragment(Fragment f) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment, f).addToBackStack("").commit();
     }
 }

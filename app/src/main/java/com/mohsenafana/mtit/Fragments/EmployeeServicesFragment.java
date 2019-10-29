@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.mohsenafana.mtit.Fragments.EmployeeServices.EmployeeVacationFragment;
+import com.mohsenafana.mtit.MainActivity;
 import com.mohsenafana.mtit.R;
 
 public class EmployeeServicesFragment extends Fragment {
@@ -18,14 +20,16 @@ public class EmployeeServicesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-      /*  EmployeeVacationsIV=container.findViewById(R.id.EmployeeVacationsIV);
+        View v = inflater.inflate(R.layout.fragment_employee_services, container, false);
+
+        EmployeeVacationsIV = v.findViewById(R.id.EmployeeVacationsIV);
         EmployeeVacationsIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), EmployeeVacationFragment.class);
-                startActivity(intent);
+                ((MainActivity) getActivity()).setFragment(new EmployeeVacationFragment());
+                //((MainActivity)getActivity()).setFragment(BlankFragment.newInstance("",""));
             }
-        });*/
-        return inflater.inflate(R.layout.fragment_employee_services,container,false);
+        });
+        return v;
     }
 }
