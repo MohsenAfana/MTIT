@@ -40,4 +40,6 @@
     <string name="mohsen_afana">Mohsen Afana</string>
     <string name="Title">Title</string>
     <string name="title_toolbar">Title</string>
+    <string name="drawer_open_content_desc">open</string>
+    <string name="drawer_close_content_desc">close</string>
 </resources>

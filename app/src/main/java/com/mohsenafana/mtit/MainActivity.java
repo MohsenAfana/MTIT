@@ -1,12 +1,18 @@
 package com.mohsenafana.mtit;
 
+import android.content.res.Configuration;
+import android.os.PersistableBundle;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.NavGraph;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -22,7 +28,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -37,9 +42,13 @@ import com.mohsenafana.mtit.Fragments.TrainingFragment;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     NavController navController;
+
     DrawerLayout drawer;
+
     NavigationView navigationView;
+
     AppBarConfiguration appBarConfiguration;
+
     BottomNavigationView bottomNavigationView;
 
 
@@ -49,17 +58,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
-
-        ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
-        actionBar.setDisplayShowCustomEnabled(true);
+        setSupportActionBar((Toolbar) findViewById(R.id.toobar));
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflator.inflate(R.layout.custom_imageview, null);
-        actionBar.setCustomView(v);
-        actionBar.setTitle(drawer.getDrawerTitle(100));
     }
+
 
     private void initView() {
         drawer = findViewById(R.id.drawer);
@@ -82,6 +87,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return NavigationUI.navigateUp(navController, drawer);
     }
 
+
+    @Override
+    public void onPostCreate(@Nullable final Bundle savedInstanceState,
+            @Nullable final PersistableBundle persistentState) {
+        super.onPostCreate(savedInstanceState, persistentState);
+        getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeAsUpIndicator(R.drawable.ic_calendar);
+    }
 
     @Override
     public void onBackPressed() {
@@ -124,8 +138,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.StoreId:
                 getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new StoreFragment()).commit();
-                Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
 
+
+                Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.TrainingId:
