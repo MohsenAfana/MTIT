@@ -13,7 +13,6 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
         <item name="android:textColor">@color/colorPrimary</item>
 
-
     </style>
 
     <style name="TextViewStyle2">
