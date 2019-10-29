@@ -1,0 +1,29 @@
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toobar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/notification_bell"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/title_toolbar"
+            android:src="@drawable/ic_notification" />
+
+        <TextView
+            android:id="@+id/title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_toolbar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/white">
+
+        </TextView>
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

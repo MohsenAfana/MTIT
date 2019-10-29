@@ -9,19 +9,19 @@
     <fragment
         android:id="@+id/home"
         android:name="com.mohsenafana.mtit.Fragments.HomeFragment"
-        android:label="fragment_home"
+        android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/profile"
         android:name="com.mohsenafana.mtit.Fragments.ProfileFragment"
-        android:label="fragment_about"
+        android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/fingerprint"
         android:name="com.mohsenafana.mtit.Fragments.FingerprintFragment"
-        android:label="fragment_bookmark"
+        android:label="@string/attendance_and_departure"
         tools:layout="@layout/fragment_fingerprint" />
 
 

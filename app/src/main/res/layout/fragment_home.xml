@@ -1,16 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:background="#ea4335"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HomeFragment">
+    android:background="@color/background"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/receivables"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:padding="8dp">
 
-</FrameLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_total_financial__receivables"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/receivables_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Total Financial Receivables"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/vacation_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_calendar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/senderNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Current vacation balance "
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/unreadmessagelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_message_dark"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/unreadmessageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Unread Messages"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/signin_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/senderIv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_black_fingerprint"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/signin_timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Signin Time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/your_balance_now_in_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_money_in_the_bank"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+
+            />
+
+        <TextView
+            android:id="@+id/balance_nowTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="balance now in bank"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title">
+
+        </TextView>
+
+
+    </LinearLayout>
+</LinearLayout>
