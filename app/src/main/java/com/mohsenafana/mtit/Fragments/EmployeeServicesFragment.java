@@ -1,6 +1,5 @@
 package com.mohsenafana.mtit.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.mohsenafana.mtit.Fragments.EmployeeServices.EmployeeVacationFragment;
-import com.mohsenafana.mtit.MainActivity;
+import com.mohsenafana.mtit.Activities.MainActivity;
 import com.mohsenafana.mtit.R;
 
 public class EmployeeServicesFragment extends Fragment {
