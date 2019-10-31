@@ -16,11 +16,11 @@ import com.mohsenafana.mtit.R;
 
 public class EmployeeServicesFragment extends Fragment {
     ImageView EmployeeVacationsIV;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_employee_services, container, false);
-
         EmployeeVacationsIV = v.findViewById(R.id.EmployeeVacationsIV);
         EmployeeVacationsIV.setOnClickListener(new View.OnClickListener() {
             @Override

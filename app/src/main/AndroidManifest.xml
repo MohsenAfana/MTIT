@@ -6,8 +6,8 @@
     <uses-feature
         android:name="android.hardware.fingerprint"
         android:required="true" />
-    <uses-permission
-        android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
         android:allowBackup="true"
@@ -17,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activities.EmployeeVacationActivity"></activity>
+        <activity android:name=".Activities.MessagesActivity" />
+        <activity android:name=".Activities.EmployeeServicesActivity" />
+        <activity android:name=".Activities.PersonnelActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

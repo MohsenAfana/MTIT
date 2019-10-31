@@ -1,18 +1,17 @@
-package com.mohsenafana.mtit;
+package com.mohsenafana.mtit.Activities;
 
-import android.content.res.Configuration;
+import android.content.Intent;
 import android.os.PersistableBundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
-import androidx.navigation.NavGraph;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -24,20 +23,21 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.mohsenafana.mtit.Fragments.EmployeeServices.EmployeeVacationFragment;
 import com.mohsenafana.mtit.Fragments.EmployeeServicesFragment;
 import com.mohsenafana.mtit.Fragments.MessagesFragment;
 import com.mohsenafana.mtit.Fragments.PersonnelFragment;
 import com.mohsenafana.mtit.Fragments.SigninFragment;
 import com.mohsenafana.mtit.Fragments.StoreFragment;
 import com.mohsenafana.mtit.Fragments.TrainingFragment;
+import com.mohsenafana.mtit.R;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     AppBarConfiguration appBarConfiguration;
 
     BottomNavigationView bottomNavigationView;
-
+    Toolbar toolbar;
 
     @SuppressLint("WrongConstant")
     @Override
@@ -58,9 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
-        setSupportActionBar((Toolbar) findViewById(R.id.toobar));
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflator.inflate(R.layout.custom_imageview, null);
     }
@@ -79,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .build();
         navigationView.setNavigationItemSelectedListener(this);
 
+
     }
 
 
@@ -90,11 +89,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onPostCreate(@Nullable final Bundle savedInstanceState,
-            @Nullable final PersistableBundle persistentState) {
+                             @Nullable final PersistableBundle persistentState) {
         super.onPostCreate(savedInstanceState, persistentState);
         getActionBar().setHomeButtonEnabled(true);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeAsUpIndicator(R.drawable.ic_calendar);
     }
 
     @Override
@@ -112,45 +110,62 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Log.d("ttt", "onNavigationItemSelected");
         switch (menuItem.getItemId()) {
             case R.id.PersonnelId:
-                getSupportFragmentManager().beginTransaction().
+                Intent PersonnelActivity = new Intent(this, PersonnelActivity.class);
+                startActivity(PersonnelActivity);
+               /* getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new PersonnelFragment()).commit();
                 Toast.makeText(MainActivity.this, "PersonnelId", Toast.LENGTH_SHORT).show();
-
+*/
                 break;
             case R.id.EmployeeServicesId:
-                getSupportFragmentManager().beginTransaction().
+                /*getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new EmployeeServicesFragment()).commit();
                 Toast.makeText(MainActivity.this, "EmployeeServicesId", Toast.LENGTH_SHORT).show();
 
+*/
+                Intent EmployeeServicesId = new Intent(this, EmployeeServicesActivity.class);
+                startActivity(EmployeeServicesId);
                 break;
             case R.id.LoginId:
-                getSupportFragmentManager().beginTransaction().
+               /* getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new SigninFragment()).commit();
+                Toast.makeText(MainActivity.this, "LoginId", Toast.LENGTH_SHORT).show();
+
+*/
                 Toast.makeText(MainActivity.this, "LoginId", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.messagesId:
-                getSupportFragmentManager().beginTransaction().
+                /*getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new MessagesFragment()).commit();
                 Toast.makeText(MainActivity.this, "messagesId", Toast.LENGTH_SHORT).show();
-
+*/
+                Intent messagesId = new Intent(this, MessagesActivity.class);
+                startActivity(messagesId);
                 break;
             case R.id.StoreId:
-                getSupportFragmentManager().beginTransaction().
+             /*   getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new StoreFragment()).commit();
 
-
+                Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
+*/
                 Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.TrainingId:
-                getSupportFragmentManager().beginTransaction().
+                /*getSupportFragmentManager().beginTransaction().
                         replace(R.id.main_fragment, new TrainingFragment()).commit();
+                Toast.makeText(MainActivity.this, "Training", Toast.LENGTH_SHORT).show();
+*/
                 Toast.makeText(MainActivity.this, "Training", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.LogoutId:
+/*
                 Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+*/
+                Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+
                 break;
         }
         closeDrawer();
