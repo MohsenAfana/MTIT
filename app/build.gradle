@@ -29,7 +29,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'me.aflak.libraries:fingerprint:2.5.3'
-
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     def nav_version = "2.1.0-beta02"
     implementation "androidx.navigation:navigation-fragment:$nav_version"

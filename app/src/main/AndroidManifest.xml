@@ -17,9 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.EmployeeVacationActivity"></activity>
+        <activity android:name=".EmployeeServicesActivity"></activity>
+        <activity android:name=".Activities.EmployeeVacationActivity" />
         <activity android:name=".Activities.MessagesActivity" />
-        <activity android:name=".Activities.EmployeeServicesActivity" />
         <activity android:name=".Activities.PersonnelActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>

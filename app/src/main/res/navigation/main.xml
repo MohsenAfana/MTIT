@@ -31,7 +31,7 @@
         android:id="@+id/employeeServicesFragment2"
         android:name="com.mohsenafana.mtit.Fragments.EmployeeServicesFragment"
         android:label="fragment_employee_services"
-        tools:layout="@layout/fragment_employee_services" />
+        tools:layout="@layout/employee_services_layout" />
 
 
 </navigation>
