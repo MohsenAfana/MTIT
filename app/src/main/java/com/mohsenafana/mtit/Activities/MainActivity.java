@@ -5,7 +5,6 @@ import android.os.PersistableBundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -30,15 +29,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.mohsenafana.mtit.EmployeeServicesActivity;
-import com.mohsenafana.mtit.Fragments.EmployeeServicesFragment;
-import com.mohsenafana.mtit.Fragments.MessagesFragment;
-import com.mohsenafana.mtit.Fragments.PersonnelFragment;
-import com.mohsenafana.mtit.Fragments.SigninFragment;
-import com.mohsenafana.mtit.Fragments.StoreFragment;
-import com.mohsenafana.mtit.Fragments.TrainingFragment;
 import com.mohsenafana.mtit.R;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
