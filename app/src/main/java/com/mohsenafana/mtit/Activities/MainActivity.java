@@ -3,6 +3,9 @@ package com.mohsenafana.mtit.Activities;
 import android.content.Intent;
 import android.os.PersistableBundle;
 
+import android.view.Gravity;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflator.inflate(R.layout.custom_imageview, null);
+
+        findViewById(R.id.menu).setOnClickListener(view -> drawer.openDrawer(Gravity.START));
+        findViewById(R.id.title_toolbar).setVisibility(View.GONE);
     }
 
 
