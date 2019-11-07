@@ -24,6 +24,6 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
     @OnClick(R.id.EmployeeVacationsIV)
     public void onViewClicked() {
-        Toast.makeText(this, "FUck off", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Text", Toast.LENGTH_SHORT).show();
     }
 }
