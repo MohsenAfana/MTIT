@@ -38,7 +38,7 @@ import javax.crypto.SecretKey;
 public class FingerprintActivity extends AppCompatActivity {
 
     private KeyStore keyStore;
-    // Variable used for storing the key in the Android Keystore container
+    // Variable used for storing the key in the Android Keystore container.
     private static final String KEY_NAME = "mohsenafana";
     private Cipher cipher;
     private TextView textView;
@@ -70,7 +70,8 @@ public class FingerprintActivity extends AppCompatActivity {
             textView.setTextColor(Color.RED);
         } else {
             // Checks whether fingerprint permission is set on manifest
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT)
+                    != PackageManager.PERMISSION_GRANTED) {
                 textView.setText("Fingerprint authentication permission not enabled");
             } else {
                 // Check whether at least one fingerprint is registered
@@ -144,7 +145,8 @@ public class FingerprintActivity extends AppCompatActivity {
             return true;
         } catch (KeyPermanentlyInvalidatedException e) {
             return false;
-        } catch (KeyStoreException | CertificateException | UnrecoverableKeyException | IOException | NoSuchAlgorithmException | InvalidKeyException e) {
+        } catch (KeyStoreException | CertificateException | UnrecoverableKeyException | IOException |
+                NoSuchAlgorithmException | InvalidKeyException e) {
             throw new RuntimeException("Failed to init Cipher", e);
         }
     }
