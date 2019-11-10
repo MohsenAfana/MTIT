@@ -56,14 +56,7 @@ public class FingerprintActivity extends AppCompatActivity {
 
         // Check whether the device has a Fingerprint sensor.
         if (!fingerprintManager.isHardwareDetected()) {
-            /**
-             * An error message will be displayed if the device does not contain the fingerprint hardware.
-             * However if you plan to implement a default authentication method,
-             * you can redirect the user to a default authentication activity from here.
-             * Example:
-             * Intent intent = new Intent(this, DefaultAuthenticationActivity.class);
-             * startActivity(intent);
-             */
+
 
             textView.setText("Your Device does not have a Fingerprint Sensor");
             textView.setVisibility(View.VISIBLE);
@@ -132,7 +125,8 @@ public class FingerprintActivity extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.M)
     public boolean cipherInit() {
         try {
-            cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" + KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
+            cipher = Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/" +
+                    KeyProperties.BLOCK_MODE_CBC + "/" + KeyProperties.ENCRYPTION_PADDING_PKCS7);
         } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
             throw new RuntimeException("Failed to get Cipher", e);
         }
