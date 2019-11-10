@@ -16,19 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Fingerprint.FingerprintActivity"></activity>
-        <activity android:name=".Fingerprint.HomeActivity"></activity>
+        <activity android:name=".Fingerprint.FingerprintActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".EmployeeServicesActivity"></activity>
         <activity android:name=".Activities.EmployeeVacationActivity" />
         <activity android:name=".Activities.MessagesActivity" />
         <activity android:name=".Activities.PersonnelActivity" />
         <activity android:name=".Activities.MainActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
     </application>
