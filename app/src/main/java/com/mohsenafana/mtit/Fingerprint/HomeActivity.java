@@ -13,7 +13,8 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.fragment_home);
+        Toast.makeText(this, "Successfully Sign In ", Toast.LENGTH_SHORT).show();
 
 
     }

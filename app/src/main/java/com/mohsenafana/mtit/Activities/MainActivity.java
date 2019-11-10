@@ -32,6 +32,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.mohsenafana.mtit.EmployeeServicesActivity;
+import com.mohsenafana.mtit.Fingerprint.FingerprintActivity;
 import com.mohsenafana.mtit.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -130,7 +131,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(MainActivity.this, "LoginId", Toast.LENGTH_SHORT).show();
 
 */
-                Toast.makeText(MainActivity.this, "LoginId", Toast.LENGTH_SHORT).show();
+                Intent Fingerprint = new Intent(this, FingerprintActivity.class);
+                startActivity(Fingerprint);
 
                 break;
             case R.id.messagesId:

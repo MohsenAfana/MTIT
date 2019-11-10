@@ -14,6 +14,8 @@ public class MessagesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_messages);
         ((TextView)findViewById(R.id.title_toolbar)).setText("Messages");
-        findViewById(R.id.ic_back).setOnClickListener(view -> onBackPressed());
+        findViewById(R.id.ic_back).setOnClickListener(view -> {
+            onBackPressed();
+        });
     }
 }

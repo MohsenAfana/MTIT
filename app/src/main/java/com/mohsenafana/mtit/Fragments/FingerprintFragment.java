@@ -1,25 +1,25 @@
 package com.mohsenafana.mtit.Fragments;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
+import com.mohsenafana.mtit.Fingerprint.FingerprintActivity;
 import com.mohsenafana.mtit.R;
 
-import org.w3c.dom.Text;
-
-import java.sql.Date;
-import java.sql.Time;
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 
 /**
@@ -27,9 +27,14 @@ import java.util.Locale;
  */
 public class FingerprintFragment extends Fragment {
     TextView TimeNowTv;
+    @BindView(R.id.AttendanceRegistrationIv)
+    ImageView AttendanceRegistrationIv;
+    @BindView(R.id.AttendanceDepartureIv)
+    ImageView AttendanceDepartureIv;
+    Context context;
 
 
-    private String mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+    private String mydate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
     public FingerprintFragment() {
     }
@@ -45,4 +50,15 @@ public class FingerprintFragment extends Fragment {
 
     }
 
+    @OnClick(R.id.AttendanceRegistrationIv)
+    public void onAttendanceRegistrationIvClicked() {
+        Intent AttendanceRegistrationIntent=new Intent(context, FingerprintActivity.class);
+        startActivity(AttendanceRegistrationIntent);
+    }
+
+    @OnClick(R.id.AttendanceDepartureIv)
+    public void onAttendanceDepartureIvClicked() {
+        Intent AttendanceDepartureIntent=new Intent(context, FingerprintActivity.class);
+        startActivity(AttendanceDepartureIntent);
+    }
 }
