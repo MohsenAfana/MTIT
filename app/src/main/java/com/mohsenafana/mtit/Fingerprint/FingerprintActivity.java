@@ -70,6 +70,8 @@ public class FingerprintActivity extends AppCompatActivity {
                 // Check whether at least one fingerprint is registered
                 if (!fingerprintManager.hasEnrolledFingerprints()) {
                     textView.setText("Register at least one fingerprint in Settings");
+
+
                 } else {
                     // Checks whether lock screen security is enabled or not
                     if (!keyguardManager.isKeyguardSecure()) {
