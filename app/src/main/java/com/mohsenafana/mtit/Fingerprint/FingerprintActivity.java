@@ -58,7 +58,7 @@ public class FingerprintActivity extends AppCompatActivity {
         if (!fingerprintManager.isHardwareDetected()) {
 
 
-            textView.setText("Your Device does not have a Fingerprint Sensor");
+            textView.setText("Your Device does not have a  Fingerprint Sensor");
             textView.setVisibility(View.VISIBLE);
             textView.setTextColor(Color.RED);
         } else {
