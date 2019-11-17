@@ -9,8 +9,10 @@
     android:padding="8dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -55,12 +57,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:padding="8dp">
 
         <LinearLayout
-            android:layout_width="98dp"
-            android:layout_height="98dp"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -81,13 +84,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/employee_vacations"
+                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="98dp"
-            android:layout_height="98dp"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -108,13 +112,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/employee_vacations"
+                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="98dp"
-            android:layout_height="98dp"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -135,6 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/employee_vacations"
+                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
@@ -143,7 +149,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp">
 
