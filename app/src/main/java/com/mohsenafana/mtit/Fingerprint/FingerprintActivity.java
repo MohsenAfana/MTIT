@@ -70,7 +70,7 @@ public class FingerprintActivity extends AppCompatActivity {
                 // Check whether at least one fingerprint is registered
                 if (!fingerprintManager.hasEnrolledFingerprints()) {
 
-                    textView.setText("Register at least one fingerprint  in Settings");
+                    textView.setText("Register at least one fingerprint in Settings");
 
 
                 } else {

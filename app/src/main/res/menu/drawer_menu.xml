@@ -29,6 +29,7 @@
         <item
             android:id="@+id/LogoutId"
             android:icon="@drawable/ic_logout"
+            android:visible="true"
             android:title="Logout" />
 
     </group>

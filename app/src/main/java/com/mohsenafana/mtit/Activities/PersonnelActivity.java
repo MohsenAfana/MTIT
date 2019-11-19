@@ -15,7 +15,7 @@ public class PersonnelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personnel);
+        setContentView(R.layout.fragment_personnel);
         ((TextView)findViewById(R.id.title_toolbar)).setText("Personnel");
         findViewById(R.id.ic_back).setOnClickListener(view -> onBackPressed());
     }

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/notification_bell"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/title_toolbar"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/title_toolbar"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_toolbar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/salaryRelative"
+        android:layout_width="180dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/salartIv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/salaryimg"
+            android:src="@drawable/salary_ic" />
+
+        <TextView
+            android:id="@+id/salartTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/salary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ZakatRelative"
+        android:layout_width="180dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/zakatIv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/zakatimg"
+            android:src="@drawable/zaka_fiter_ic" />
+
+        <TextView
+            android:id="@+id/zakatIvTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/zakat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PortfolioRelative"
+        android:layout_width="180dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cell"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/portfolioManagementIv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/portfolioimg"
+            android:src="@drawable/ic_portfolio_management" />
+
+        <TextView
+            android:id="@+id/portfolioManagementTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/portfolio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TransactionRelative"
+        android:layout_width="180dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cell"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/TransactionfromSalaryIv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/transactionimg"
+            android:src="@drawable/financial_transactions_icon" />
+
+        <TextView
+            android:id="@+id/TransactionfromSalaryTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/transaction"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

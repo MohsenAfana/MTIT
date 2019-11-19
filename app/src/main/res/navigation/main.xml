@@ -24,11 +24,12 @@
 
     <fragment
         android:id="@+id/fingerprint"
+        android:name="com.mohsenafana.mtit.Fragments.FingerprintFragment"
         android:label="@string/attendance_and_departure"
         tools:layout="@layout/fragment_fingerprint" />
     <fragment
         android:id="@+id/employeeServicesFragment2"
-        android:name="com.mohsenafana.mtit.Fragments."
+        android:name="com.mohsenafana.mtit.Fragments.EmployeeServicesFragment"
         android:label="fragment_employee_services"
         tools:layout="@layout/employee_services_layout" />
 

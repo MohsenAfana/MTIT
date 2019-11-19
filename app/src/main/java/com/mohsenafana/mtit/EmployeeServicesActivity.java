@@ -3,8 +3,9 @@ package com.mohsenafana.mtit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,9 +18,8 @@ import butterknife.OnClick;
 
 public class EmployeeServicesActivity extends AppCompatActivity {
 
-
-    @BindView(R.id.EmployeeVacations)
-    LinearLayout EmployeeVacations;
+    @BindView(R.id.EmployeeVacationsIV)
+    ImageView EmployeeVacationsIV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
         findViewById(R.id.ic_back).setOnClickListener(view -> onBackPressed());
     }
 
-
-
-    @OnClick(R.id.EmployeeVacations)
+    @OnClick(R.id.EmployeeVacationsIV)
     public void onViewClicked() {
         Intent intent = new Intent(this, EmployeeVacationActivity.class);
         startActivity(intent);
