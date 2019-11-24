@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        Log.d("ttt", "onNavigationItemSelected");
+        Log.d("mohsen", "onNavigationItemSelected");
         switch (menuItem.getItemId()) {
             case R.id.PersonnelId:
                 Intent PersonnelActivity = new Intent(this, PersonnelActivity.class);
@@ -120,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.LoginId:
                 Intent Fingerprint = new Intent(this, FingerprintActivity.class);
                 startActivity(Fingerprint);
-
                 break;
             case R.id.messagesId:
                 Intent messagesId = new Intent(this, MessagesActivity.class);
@@ -128,15 +127,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.StoreId:
                 Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
-
                 break;
             case R.id.TrainingId:
                 Toast.makeText(MainActivity.this, "Training", Toast.LENGTH_SHORT).show();
-
                 break;
             case R.id.LogoutId:
                 Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
-
                 break;
         }
         closeDrawer();
