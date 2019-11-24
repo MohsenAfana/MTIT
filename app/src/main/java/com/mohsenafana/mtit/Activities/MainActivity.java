@@ -6,6 +6,7 @@ import android.os.PersistableBundle;
 import android.view.Gravity;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -111,59 +112,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.PersonnelId:
                 Intent PersonnelActivity = new Intent(this, PersonnelActivity.class);
                 startActivity(PersonnelActivity);
-               /* getSupportFragmentManager().beginTransaction().
-                        replace(R.id.main_fragment, new PersonnelFragment()).commit();
-                Toast.makeText(MainActivity.this, "PersonnelId", Toast.LENGTH_SHORT).show();
-*/
                 break;
             case R.id.EmployeeServicesId:
-                /*getSupportFragmentManager().beginTransaction().
-                        replace(R.id.main_fragment, new EmployeeServicesFragment()).commit();
-                Toast.makeText(MainActivity.this, "EmployeeServicesId", Toast.LENGTH_SHORT).show();
-
-*/
                 Intent EmployeeServicesId = new Intent(this, EmployeeServicesActivity.class);
                 startActivity(EmployeeServicesId);
                 break;
             case R.id.LoginId:
-               /* getSupportFragmentManager().beginTransaction().
-                        replace(R.id.main_fragment, new SigninFragment()).commit();
-                Toast.makeText(MainActivity.this, "LoginId", Toast.LENGTH_SHORT).show();
-
-*/
                 Intent Fingerprint = new Intent(this, FingerprintActivity.class);
                 startActivity(Fingerprint);
 
                 break;
             case R.id.messagesId:
-                /*getSupportFragmentManager().beginTransaction().
-                        replace(R.id.main_fragment, new MessagesFragment()).commit();
-                Toast.makeText(MainActivity.this, "messagesId", Toast.LENGTH_SHORT).show();
-*/
                 Intent messagesId = new Intent(this, MessagesActivity.class);
                 startActivity(messagesId);
                 break;
             case R.id.StoreId:
-             /*   getSupportFragmentManager().beginTransaction().
-                        replace(R.id.main_fragment, new StoreFragment()).commit();
-
-                Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
-*/
                 Toast.makeText(MainActivity.this, "Store", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.TrainingId:
-                /*getSupportFragmentManager().beginTransaction().
-                        replace(R.id.main_fragment, new TrainingFragment()).commit();
-                Toast.makeText(MainActivity.this, "Training", Toast.LENGTH_SHORT).show();
-*/
                 Toast.makeText(MainActivity.this, "Training", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.LogoutId:
-/*
-                Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
-*/
                 Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
 
                 break;
