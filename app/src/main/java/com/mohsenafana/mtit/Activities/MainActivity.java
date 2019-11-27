@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onPostCreate(savedInstanceState, persistentState);
         getActionBar().setHomeButtonEnabled(true);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
@@ -134,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.LogoutId:
                 Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
                 break;
+
         }
         closeDrawer();
         return true;
