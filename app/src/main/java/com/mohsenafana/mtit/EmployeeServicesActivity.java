@@ -3,9 +3,7 @@ package com.mohsenafana.mtit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
-
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +18,8 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
     @BindView(R.id.EmployeeVacationsIV)
     ImageView EmployeeVacationsIV;
+    @BindView(R.id.portfolioManagementIv)
+    ImageView portfolioManagementIv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,20 @@ public class EmployeeServicesActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.EmployeeVacationsIV)
-    public void onViewClicked() {
+    public void onEmployeeVacationsIVClicked() {
         Intent intent = new Intent(this, EmployeeVacationActivity.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.portfolioManagementIv)
+    public void onPortfolioManagementIvClicked() {
+        Intent intent = new Intent(this, employeaePortfolioManagment.class);
+        startActivity(intent);
+    }
+
+  /*  @OnClick(R.id.EmployeeVacationsIV)
+    public void onViewClicked() {
+
+    }*/
+
 }

@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.ToolbarWidgetWrapper;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     AppBarConfiguration appBarConfiguration;
 
     BottomNavigationView bottomNavigationView;
+
+
     Toolbar toolbar;
 
     @SuppressLint("WrongConstant")

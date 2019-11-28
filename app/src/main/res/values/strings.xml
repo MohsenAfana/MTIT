@@ -49,4 +49,9 @@
     <string name="title_toolbar">Title</string>
     <string name="drawer_open_content_desc">open</string>
     <string name="drawer_close_content_desc">close</string>
+    <array name="colors">
+        <item>#ffffff</item>
+        <item>#000000</item>
+        <item>#f0f</item>
+    </array>
 </resources>

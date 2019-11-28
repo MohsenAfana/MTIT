@@ -39,5 +39,8 @@ dependencies {
     def nav_version = "2.1.0-beta02"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+
 
 }
