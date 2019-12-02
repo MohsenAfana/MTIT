@@ -38,13 +38,10 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
     @OnClick(R.id.portfolioManagementIv)
     public void onPortfolioManagementIvClicked() {
-        Intent intent = new Intent(this, employeaePortfolioManagment.class);
+        Intent intent = new Intent(this,ReoprtsActivity.class);
         startActivity(intent);
     }
 
-  /*  @OnClick(R.id.EmployeeVacationsIV)
-    public void onViewClicked() {
 
-    }*/
 
 }

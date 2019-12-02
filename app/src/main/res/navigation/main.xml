@@ -8,13 +8,13 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.mohsenafana.mtit.Fragments.HomeFragment"
+        android:name="com.mohsenafana.mtit.Reports.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/profile"
-        android:name="com.mohsenafana.mtit.Fragments.ProfileFragment"
+        android:name="com.mohsenafana.mtit.Reports.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -24,12 +24,12 @@
 
     <fragment
         android:id="@+id/fingerprint"
-        android:name="com.mohsenafana.mtit.Fragments.FingerprintFragment"
+        android:name="com.mohsenafana.mtit.Reports.FingerprintFragment"
         android:label="@string/attendance_and_departure"
         tools:layout="@layout/fragment_fingerprint" />
     <fragment
         android:id="@+id/employeeServicesFragment2"
-        android:name="com.mohsenafana.mtit.Fragments.EmployeeServicesFragment"
+        android:name="com.mohsenafana.mtit.Reports.EmployeeServicesFragment"
         android:label="fragment_employee_services"
         tools:layout="@layout/employee_services_layout" />
 

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".employeaePortfolioManagment">
+    tools:context=".VacationsReportActivity">
     <androidx.appcompat.widget.Toolbar
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toobar"
@@ -57,26 +56,20 @@
             </TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="Vacations"
+        android:textColor="@color/colorPrimary">
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/piechart"
+    </TextView>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-<!--    <com.anychart.AnyChartView-->
-<!--        android:id="@+id/attendance_and_leave"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        />-->
-<!--    <com.anychart.AnyChartView-->
-<!--        android:id="@+id/permissions"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        />-->
-<!--    <com.anychart.AnyChartView-->
-<!--        android:id="@+id/vacations"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        />-->
 
 </LinearLayout>

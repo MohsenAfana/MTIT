@@ -18,7 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".employeaePortfolioManagment"></activity>
+        <activity android:name=".VacationsReportActivity"></activity>
+        <activity android:name=".PermissionReportActivity" />
+        <activity android:name=".ReoprtsActivity" />
+        <activity android:name=".AttendanceReportActivity" />
         <activity android:name=".Fingerprint.FingerprintActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +33,9 @@
         <activity android:name=".Activities.EmployeeVacationActivity" />
         <activity android:name=".Activities.MessagesActivity" />
         <activity android:name=".Activities.PersonnelActivity" />
-        <activity android:name=".Activities.MainActivity"></activity>
+        <activity android:name=".Activities.MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -4,15 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.widget.TextView;
 
-import com.anychart.AnyChart;
-import com.anychart.AnyChartView;
-import com.anychart.chart.common.dataentry.DataEntry;
-import com.anychart.chart.common.dataentry.ValueDataEntry;
-import com.anychart.charts.Pie;
-import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
@@ -20,21 +13,17 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class employeaePortfolioManagment extends AppCompatActivity {
+public class AttendanceReportActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_employeae_portfolio_managment);
+        setContentView(R.layout.attendance_report_layout);
         ((TextView) findViewById(R.id.title_toolbar)).setText("Employee Report");
         findViewById(R.id.ic_back).setOnClickListener(view -> onBackPressed());
         draw_chart();
-
-
-
     }
 
     private void draw_chart() {
@@ -47,7 +36,7 @@ public class employeaePortfolioManagment extends AppCompatActivity {
         attendance_data.add(new Entry(1240f, 3));
         attendance_data.add(new Entry(1369f, 4));
 
-        PieDataSet dataSet = new PieDataSet(attendance_data, "Number Of Employees");
+        PieDataSet dataSet = new PieDataSet(attendance_data, "Employee worktime report");
 
         ArrayList employee_data = new ArrayList();
 
@@ -60,7 +49,8 @@ public class employeaePortfolioManagment extends AppCompatActivity {
         PieData data = new PieData(employee_data, dataSet);
         pieChart.setData(data);
         dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-        pieChart.animateXY(1000, 2000);
+        dataSet.setValueTextSize(12);
+        pieChart.animateXY(1000, 1500);
 
     }
 

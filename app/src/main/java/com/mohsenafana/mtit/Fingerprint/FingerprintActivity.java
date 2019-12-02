@@ -38,7 +38,6 @@ import javax.crypto.SecretKey;
 public class FingerprintActivity extends AppCompatActivity {
 
     private KeyStore keyStore;
-    // Variable used for storing the key in the Android Keystore container.
     private static final String KEY_NAME = "mohsenafana";
     private Cipher cipher;
     private TextView textView;
@@ -48,13 +47,11 @@ public class FingerprintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fingerprint);
 
-        // Initializing both Android Keyguard Manager and Fingerprint Manager
         KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
         FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
 
         textView = (TextView) findViewById(R.id.errorText);
 
-        // Check whether the device has a Fingerprint sensor.
         if (!fingerprintManager.isHardwareDetected()) {
 
 
@@ -62,19 +59,16 @@ public class FingerprintActivity extends AppCompatActivity {
             textView.setVisibility(View.VISIBLE);
             textView.setTextColor(Color.RED);
         } else {
-            // Checks whether fingerprint permission is set on manifest
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT)
                     != PackageManager.PERMISSION_GRANTED) {
                 textView.setText("Fingerprint authentication permission not enabled");
             } else {
-                // Check whether at least one fingerprint is registered
                 if (!fingerprintManager.hasEnrolledFingerprints()) {
 
                     textView.setText("Register at least one fingerprint in Settings");
 
 
                 } else {
-                    // Checks  whether lock screen security is enabled or not
                     if (!keyguardManager.isKeyguardSecure()) {
                         textView.setText("Lock screen security not enabled in Settings");
                     } else {

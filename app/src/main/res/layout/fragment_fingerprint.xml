@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="8dp"
-    tools:context=".Fragments.FingerprintFragment">
+    tools:context=".Reports.FingerprintFragment">
 
     <CalendarView
         android:layout_width="300dp"
