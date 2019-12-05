@@ -54,25 +54,5 @@ public class AttendanceReportActivity extends AppCompatActivity {
 
     }
 
-//    public void draw_chart() {
-//        Pie attendance_and_leave = AnyChart.pie();
-//        List<DataEntry> attendance_and_leave_data = new ArrayList<>();
-//        attendance_and_leave_data.add(new ValueDataEntry("Workdays", 10000));
-//        attendance_and_leave_data.add(new ValueDataEntry("Vacations", 8000));
-//        attendance_and_leave_data.add(new ValueDataEntry("Weekly Holidays", 8000));
-//        attendance_and_leave_data.add(new ValueDataEntry("Delay Days", 16000));
-//        attendance_and_leave.data(attendance_and_leave_data);
-//        attendance_and_leave.autoRedraw(true);
-//        AnyChartView anyChartView = findViewById(R.id.attendance_and_leave);
-//        anyChartView.setChart(attendance_and_leave);
-//
-//    /*    Pie permissions=AnyChart.pie();
-//        List<DataEntry> permissions_data=new ArrayList<>();
-//        permissions_data.add(new ValueDataEntry("Special permission",10000));
-//        permissions_data.add(new ValueDataEntry("Morning Delay",10000));
-//        permissions_data.add(new ValueDataEntry("Job Assignment",10000));
-//        permissions_data.add(new ValueDataEntry("Without Permission",10000));
-//        permissions_data.addAll(attendance_and_leave_data);
-//        anyChartView.setChart(permissions);*/
-//    }
+
 }
