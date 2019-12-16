@@ -28,7 +28,7 @@ public class AttendanceReportActivity extends AppCompatActivity {
 
     private void draw_chart() {
         PieChart pieChart = findViewById(R.id.piechart);
-        ArrayList attendance_data = new ArrayList();
+        ArrayList<Entry> attendance_data = new ArrayList<>();
 
         attendance_data.add(new Entry(945f, 0));
         attendance_data.add(new Entry(1040f, 1));
@@ -38,7 +38,7 @@ public class AttendanceReportActivity extends AppCompatActivity {
 
         PieDataSet dataSet = new PieDataSet(attendance_data, "Employee worktime report");
 
-        ArrayList employee_data = new ArrayList();
+        ArrayList<String> employee_data = new ArrayList<>();
 
         employee_data.add("Delay Days");
         employee_data.add("Not Entered");
