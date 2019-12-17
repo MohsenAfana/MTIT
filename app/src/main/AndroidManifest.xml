@@ -23,17 +23,17 @@
         <activity android:name=".ReoprtsActivity" />
         <activity android:name=".AttendanceReportActivity" />
         <activity android:name=".Fingerprint.FingerprintActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".EmployeeServicesActivity" />
         <activity android:name=".Activities.EmployeeVacationActivity" />
         <activity android:name=".Activities.MessagesActivity" />
         <activity android:name=".Activities.PersonnelActivity" />
         <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>

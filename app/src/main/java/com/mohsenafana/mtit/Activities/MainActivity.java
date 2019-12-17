@@ -5,6 +5,8 @@ import android.os.PersistableBundle;
 
 import android.view.Gravity;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.widget.ToolbarWidgetWrapper;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -33,22 +36,25 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.mohsenafana.mtit.EmployeeServicesActivity;
 import com.mohsenafana.mtit.Fingerprint.FingerprintActivity;
 import com.mohsenafana.mtit.R;
 
+import ps.gov.mtit.ssologin.SSOHelper;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String CLIENT_ID = "MAKTABI_MTIT";
+    private static final String CLIENT_SECRET = "_7183453c90a726a27f4823956054e566c554e03a45";
     NavController navController;
-
     DrawerLayout drawer;
-
     NavigationView navigationView;
 
     AppBarConfiguration appBarConfiguration;
 
     BottomNavigationView bottomNavigationView;
-
+    private View parent_view;
 
     Toolbar toolbar;
 
@@ -59,10 +65,42 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         initView();
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
-
-
         findViewById(R.id.menu).setOnClickListener(view -> drawer.openDrawer(Gravity.START));
         findViewById(R.id.title_toolbar).setVisibility(View.GONE);
+        SSOHelper.doLogin(this, CLIENT_ID, CLIENT_SECRET);
+    }
+
+
+    private void make_toast() {
+        View layout = getLayoutInflater().inflate(R.layout.toast_custom, (ViewGroup) findViewById(R.id.custom_toast_layout_id));
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setTextColor(Color.WHITE);
+        text.setText("Success!");
+        CardView lyt_card = layout.findViewById(R.id.lyt_card);
+        lyt_card.setCardBackgroundColor(getResources().getColor(R.color.green_500));
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SSOHelper.SSO_LOGIN) {
+            if (resultCode == RESULT_OK) {
+                if (data != null && data.getExtras() != null) {
+                    String token =
+                            data.getStringExtra("SSOTOKEN");
+                    String refreshToken =
+                            data.getStringExtra("SSOREFRESHTOKEN");
+                    make_toast();
+
+                }
+            }
+        }
     }
 
 
