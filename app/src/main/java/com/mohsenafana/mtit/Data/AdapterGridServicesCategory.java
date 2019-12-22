@@ -16,7 +16,7 @@ import java.util.List;
 
 public class AdapterGridServicesCategory extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<ServicesCategory> items = new ArrayList<>();
+    private List<ServicesCategory> items;
 
     private Context ctx;
     private OnItemClickListener mOnItemClickListener;
@@ -41,9 +41,9 @@ public class AdapterGridServicesCategory extends RecyclerView.Adapter<RecyclerVi
 
         public OriginalViewHolder(View v) {
             super(v);
-            image = (ImageView) v.findViewById(R.id.image);
-            title = (TextView) v.findViewById(R.id.title);
-            lyt_parent = (View) v.findViewById(R.id.lyt_parent);
+            image = v.findViewById(R.id.image);
+            title = v.findViewById(R.id.title);
+            lyt_parent = v.findViewById(R.id.lyt_parent);
         }
     }
 
@@ -55,7 +55,6 @@ public class AdapterGridServicesCategory extends RecyclerView.Adapter<RecyclerVi
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof OriginalViewHolder) {

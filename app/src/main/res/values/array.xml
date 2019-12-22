@@ -232,14 +232,13 @@
         <item>Youtube</item>
     </string-array>
 
-    <!--shopping category data-->
-    <integer-array name="shop_category_icon">
+    <!--Services category data-->
+    <integer-array name="services_category_icon">
         <item>@drawable/ic_employee_functional</item>
         <item>@drawable/ic_portfolio_management</item>
         <item>@drawable/ic_zakat</item>
         <item>@drawable/ic_employeedata</item>
         <item>@drawable/ic_outstanding_transactions</item>
-
         <item>@drawable/ic_store</item>
         <item>@drawable/ic_training</item>
         <item>@drawable/ic_calendar</item>
@@ -270,15 +269,15 @@
     </string-array>
 
     <string-array name="shop_category_brief">
-        <item>100k Items</item>
-        <item>655k Items</item>
-        <item>221k Items</item>
-        <item>85k Items</item>
-        <item>725k Items</item>
+        <item> Items</item>
+        <item> Items</item>
+        <item> Items</item>
+        <item> Items</item>
+        <item> Items</item>
 
-        <item>932k Items</item>
-        <item>475k Items</item>
-        <item>362k Items</item>
+        <item> Items</item>
+        <item> Items</item>
+        <item> Items</item>
     </string-array>
 
     <!--shopping product data-->

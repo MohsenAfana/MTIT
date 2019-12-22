@@ -17,7 +17,7 @@ public class DataGenerator {
 
     public static List<ServicesCategory> getShoppingCategory(Context ctx) {
         List<ServicesCategory> items = new ArrayList<>();
-        TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.shop_category_icon);
+        TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.services_category_icon);
         TypedArray drw_arr_bg = ctx.getResources().obtainTypedArray(R.array.shop_category_bg);
         String[] title_arr = ctx.getResources().getStringArray(R.array.Services_category_title);
         String[] brief_arr = ctx.getResources().getStringArray(R.array.shop_category_brief);
