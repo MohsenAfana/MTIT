@@ -38,6 +38,7 @@ public class AttendanceReportActivity extends AppCompatActivity {
 
         PieDataSet dataSet = new PieDataSet(attendance_data, "Employee worktime report");
 
+
         ArrayList<String> employee_data = new ArrayList<>();
 
         employee_data.add("Delay Days");
