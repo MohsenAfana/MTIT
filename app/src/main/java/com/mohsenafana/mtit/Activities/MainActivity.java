@@ -40,6 +40,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.mohsenafana.mtit.EmployeeServicesActivity;
 import com.mohsenafana.mtit.Fingerprint.FingerprintActivity;
 import com.mohsenafana.mtit.R;
+import com.mohsenafana.mtit.ServicesCategoryCard;
 
 import ps.gov.mtit.ssologin.SSOHelper;
 
@@ -156,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(PersonnelActivity);
                 break;
             case R.id.EmployeeServicesId:
-                Intent EmployeeServicesId = new Intent(this, EmployeeServicesActivity.class);
+                Intent EmployeeServicesId = new Intent(this, ServicesCategoryCard.class);
                 startActivity(EmployeeServicesId);
                 break;
             case R.id.LoginId:
