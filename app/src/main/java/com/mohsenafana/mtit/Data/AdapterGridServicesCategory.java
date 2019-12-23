@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mohsenafana.mtit.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterGridServicesCategory extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -50,7 +49,7 @@ public class AdapterGridServicesCategory extends RecyclerView.Adapter<RecyclerVi
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_shop_category_card, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_service_category_card, parent, false);
         vh = new OriginalViewHolder(v);
         return vh;
     }

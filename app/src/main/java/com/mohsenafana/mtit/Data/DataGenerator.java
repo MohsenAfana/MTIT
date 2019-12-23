@@ -15,7 +15,8 @@ public class DataGenerator {
     private static Random r = new Random();
 
 
-    public static List<ServicesCategory> getShoppingCategory(Context ctx) {
+
+    public static List<ServicesCategory> getServiceCategory(Context ctx) {
         List<ServicesCategory> items = new ArrayList<>();
         TypedArray drw_arr = ctx.getResources().obtainTypedArray(R.array.services_category_icon);
         TypedArray drw_arr_bg = ctx.getResources().obtainTypedArray(R.array.shop_category_bg);
@@ -32,6 +33,5 @@ public class DataGenerator {
         }
         return items;
     }
-
 
 }

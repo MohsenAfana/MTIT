@@ -39,7 +39,7 @@ public class ServicesCategoryCard extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setNestedScrollingEnabled(false);
 
-        List<ServicesCategory> items = DataGenerator.getShoppingCategory(this);
+        List<ServicesCategory> items = DataGenerator.getServiceCategory(this);
 
         //set data and list adapter
         mAdapter = new AdapterGridServicesCategory(this, items);
